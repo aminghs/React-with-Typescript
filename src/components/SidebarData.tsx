@@ -1,65 +1,64 @@
 import {
     AiFillCaretDown,
     AiFillCaretUp,
-    AiOutlineHistory,
     AiOutlineHome,
     AiOutlineMoneyCollect,
     AiOutlineUser
 } from 'react-icons/ai';
-import { FaCog, FaOpencart } from 'react-icons/fa';
+import { FaOpencart } from 'react-icons/fa';
 import { SidebarItem } from '../models/SidebarItem';
 
 export const SidebarData: SidebarItem[] = [
     {
         title: 'Rolling bearings',
-        path: '/overview',
+        path: '/rolling',
         icon: <AiOutlineHome />,
         iconClosed: <AiFillCaretDown />,
         iconOpened: <AiFillCaretUp />,
         subnav: [
             {
                 title: 'Principles of rolling bearing selection',
-                path: '/overview/users',
+                path: '/rolling/principles',
                 icon: <AiOutlineUser />,
                 iconClosed: <AiFillCaretDown />,
                 iconOpened: <AiFillCaretUp />,
                 subnav: [
                     {
                         title: 'General bearing knowledge',
-                        path: '/overview/users',
+                        path: '/rolling/principles/general',
                         icon: <AiOutlineUser />
                     }
                 ],
             },
             {
                 title: 'Ball bearings',
-                path: '/overview/revenue',
+                path: '/rolling/ball',
                 icon: <AiOutlineMoneyCollect />,
             },
             {
                 title: 'Roller bearings',
-                path: '/overview/users',
+                path: '/rolling/roller',
                 icon: <AiOutlineUser />,
                 iconClosed: <AiFillCaretDown />,
                 iconOpened: <AiFillCaretUp />,
                 subnav: [
                     {
                         title: 'General bearing knowledge',
-                        path: '/overview/users',
+                        path: '/rolling/roller/general',
                         icon: <AiOutlineUser />
                     }
                 ],
             },
             {
                 title: 'Bearing accessories',
-                path: '/overview/revenue',
+                path: '/rolling/bearing',
                 icon: <AiOutlineMoneyCollect />
             }
         ]
     },
     {
         title: 'Mounted bearings and housings',
-        path: '/order',
+        path: '/mounted',
         icon: <FaOpencart />
     },
 
