@@ -17,7 +17,7 @@ const Nav = styled.div`
 `;
 
 const SidebarNav = styled.div<{ sidebar: boolean }>`
-    width: 500px;
+    width: 400px;
     height: 100vh;
     background-color: white;
     position: fixed;
@@ -34,7 +34,7 @@ const NavIcon = styled(Link)`
     align-items: center;
     height: 5rem;
     font-size: 2rem;
-    margin-left: 2rem;
+    margin-left: 1rem;
 `;
 
 const SidebarWrap = styled.div``;

@@ -10,7 +10,7 @@ const App: FC = () => {
     return (
  
         <Router>
-             <Header />
+            <Header />
             <Sidebar />
             <Switch>
                 <Route path="/" component={Main} exact></Route>
