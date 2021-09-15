@@ -10,7 +10,6 @@ type SidebarLinkProps = {
 };
 
 
-
 const SidebarLink = styled(Link)`
     display: flex;
     justify-content: space-between;
@@ -67,7 +66,8 @@ const SubSubmenu: FC<SidebarLinkProps> = ({ item }) => {
    return (
       <>
          <DropdownLink to={item.path} onClick={showSubSubnav}>
-         <SidebarLink to={item.icon} onClick={showSubSubnav} style={subSubnav ? {backgroundColor: "blue"} :{} }/>
+         {/*<!-- indication of their active status -->*/}
+         {/*<SidebarLink to={item.icon} onClick={showSubSubnav} style={subSubnav ? {backgroundColor: "blue"} :{} }/>*/}
             {item.icon}
             <SidebarLabel>{item.title}</SidebarLabel>
             <div>{item?.subnav && subSubnav ? item?.iconOpened : item?.iconClosed}</div>
@@ -93,7 +93,8 @@ const Submenu: FC<SidebarLinkProps> = ({ item }) => {
     return (
        <>
           <SidebarLink to={item.path} onClick={showSubnav}>
-          <SidebarLink to={item.icon} onClick={showSubnav} style={subnav ? {backgroundColor: "blue"} :{} }/>
+          {/*<!-- indication of their active status -->*/}
+          {/*<SidebarLink to={item.icon} onClick={showSubnav} style={subnav ? {backgroundColor: "blue"} :{} }/>*/}
              <div>
                 {item.icon}
                 <SidebarLabel>{item.title}</SidebarLabel>
