@@ -39,9 +39,6 @@ const NavIcon = styled(Link)`
 
 const SidebarWrap = styled.div``;
 
-
-
-
 const Sidebar: FC = () => {
     const [sidebar, setSidebar] = useState(false);
     const showSidebar = () => setSidebar(!sidebar);
@@ -56,8 +53,7 @@ const Sidebar: FC = () => {
                 <SidebarWrap>
                     <NavIcon to="#" onClick={showSidebar}>
                         <AiOutlineClose />
-                    </NavIcon>
-                    
+                    </NavIcon>                   
                     {Data.Data.map((item: any, index: any) => {
                         return <Submenu item={item} key={index} />;
                     })}

@@ -3,14 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { SidebarItem } from '../models/SidebarItem';
 import Data from "./myfile.json";
-import { SidebarData } from './SidebarData';
-import {
-   AiFillCaretDown,
-   AiFillCaretUp,
-} from 'react-icons/ai';
 
-const closed = <AiFillCaretDown/>;
-const opened = <AiFillCaretUp/>;
 
 type SidebarLinkProps = {
     item: SidebarItem;
@@ -74,6 +67,7 @@ const SubSubmenu: FC<SidebarLinkProps> = ({ item }) => {
    return (
       <>
          <DropdownLink to={item.path} onClick={showSubSubnav}>
+         <SidebarLink to={item.icon} onClick={showSubSubnav} style={subSubnav ? {backgroundColor: "blue"} :{} }/>
             {item.icon}
             <SidebarLabel>{item.title}</SidebarLabel>
             <div>{item?.subnav && subSubnav ? item?.iconOpened : item?.iconClosed}</div>
@@ -96,10 +90,10 @@ const SubSubmenu: FC<SidebarLinkProps> = ({ item }) => {
 const Submenu: FC<SidebarLinkProps> = ({ item }) => {
     const [subnav, setSubnav] = useState(false);
     const showSubnav = () => setSubnav(!subnav);
- 
     return (
        <>
           <SidebarLink to={item.path} onClick={showSubnav}>
+          <SidebarLink to={item.icon} onClick={showSubnav} style={subnav ? {backgroundColor: "blue"} :{} }/>
              <div>
                 {item.icon}
                 <SidebarLabel>{item.title}</SidebarLabel>
@@ -107,8 +101,7 @@ const Submenu: FC<SidebarLinkProps> = ({ item }) => {
              <div>{item?.subnav && subnav ? item?.iconOpened : item?.iconClosed}</div>
           </SidebarLink>
           {subnav &&
-             item?.subnav?.map((subnavItem, index) => {
-               
+             item?.subnav?.map((subnavItem, index) => {           
                 return (                
                 <SubSubmenu item={subnavItem} key={index} />  );
              })}
