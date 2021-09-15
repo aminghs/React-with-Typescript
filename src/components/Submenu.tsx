@@ -3,10 +3,20 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { SidebarItem } from '../models/SidebarItem';
 import Data from "./myfile.json";
+import { SidebarData } from './SidebarData';
+import {
+   AiFillCaretDown,
+   AiFillCaretUp,
+} from 'react-icons/ai';
+
+const closed = <AiFillCaretDown/>;
+const opened = <AiFillCaretUp/>;
 
 type SidebarLinkProps = {
     item: SidebarItem;
 };
+
+
 
 const SidebarLink = styled(Link)`
     display: flex;

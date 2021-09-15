@@ -3,54 +3,40 @@
        {
          "title": "Rolling bearings",
          "path": "/rolling",
-         "icon": "<AiOutlineHome />",
-         "iconClosed": "<AiFillCaretDown />",
-         "iconOpened": "<AiFillCaretUp />",
             "subnav":[
              {
                  "title": "Principles of rolling bearing selection",
                  "path": "/rolling/principles",
-                 "icon": "<AiOutlineUser />",
-                 "iconClosed": "<AiFillCaretDown />",
-                 "iconOpened": "<AiFillCaretUp />",
                 "subnav":[
                    {
                          "title": "General bearing knowledge",
-                         "path": "/rolling/principles/general",
-                         "icon": "<AiOutlineUser />"
+                         "path": "/rolling/principles/general"
                    }
                 ]
              },
              {
                  "title": "Ball bearings",
-                 "path": "/rolling/ball",
-                 "icon": "<AiOutlineMoneyCollect />"
+                 "path": "/rolling/ball"
              },
              {
                  "title": "Roller bearings",
                  "path": "/rolling/roller",
-                 "icon": "<AiOutlineUser />",
-                 "iconClosed": "<AiFillCaretDown />",
-                 "iconOpened": "<AiFillCaretUp />",
                 "subnav":[
                    {
                          "title": "General bearing knowledge",
-                         "path": "/rolling/roller/general",
-                         "icon": "<AiOutlineUser />"
+                         "path": "/rolling/roller/general"
                    }
                 ]
              },
              {
                  "title": "Bearing accessories",
-                 "path": "/rolling/bearing",
-                 "icon": "<AiOutlineMoneyCollect />"
+                 "path": "/rolling/bearing"
              }
           ]
        },
        {
          "title": "Mounted bearings and housings",
-         "path": "/mounted",
-         "icon": "<FaOpencart />"
+         "path": "/mounted"
        }
     ]
  }
