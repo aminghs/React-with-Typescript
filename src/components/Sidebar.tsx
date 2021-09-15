@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { IconContext } from 'react-icons';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-import { SidebarData } from './SidebarData';
+import Data from "./myfile.json";
 import Submenu from './Submenu';
 
 const Nav = styled.div`
@@ -23,7 +23,7 @@ const SidebarNav = styled.div<{ sidebar: boolean }>`
     top: 60px;
     left: ${({ sidebar }) => (sidebar ? '0' : '-100%')};
     transition: 350ms;
-    border-radius: 2px;
+    border-style: solid;
     border-color: black;
 `;
 
@@ -38,10 +38,12 @@ const NavIcon = styled(Link)`
 
 const SidebarWrap = styled.div``;
 
+
+
+
 const Sidebar: FC = () => {
     const [sidebar, setSidebar] = useState(false);
     const showSidebar = () => setSidebar(!sidebar);
-
     return (
         <IconContext.Provider value={{ color: '#000' }}>
             <Nav>
@@ -54,7 +56,8 @@ const Sidebar: FC = () => {
                     <NavIcon to="#" onClick={showSidebar}>
                         <AiOutlineClose />
                     </NavIcon>
-                    {SidebarData.map((item, index) => {
+                    
+                    {Data.Data.map((item: any, index: any) => {
                         return <Submenu item={item} key={index} />;
                     })}
                 </SidebarWrap>

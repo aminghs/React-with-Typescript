@@ -2,6 +2,7 @@ import React, { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { SidebarItem } from '../models/SidebarItem';
+import Data from "./myfile.json";
 
 type SidebarLinkProps = {
     item: SidebarItem;
@@ -68,10 +69,12 @@ const SubSubmenu: FC<SidebarLinkProps> = ({ item }) => {
             <div>{item?.subnav && subSubnav ? item?.iconOpened : item?.iconClosed}</div>
          </DropdownLink>
          {subSubnav && item?.subnav?.map((subnavItem, index) => {
+            
             return (
                <SubDropdownLink to={subnavItem.path}>
                   {subnavItem.icon}
                   <SidebarLabel>{subnavItem.title}</SidebarLabel>
+                  {console.log(subSubnav , Data )}
                </SubDropdownLink>
             );
          })}
@@ -95,7 +98,9 @@ const Submenu: FC<SidebarLinkProps> = ({ item }) => {
           </SidebarLink>
           {subnav &&
              item?.subnav?.map((subnavItem, index) => {
-                return (<SubSubmenu item={subnavItem} key={index} />);
+               
+                return (                
+                <SubSubmenu item={subnavItem} key={index} />  );
              })}
        </>
     );
